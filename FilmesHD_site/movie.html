@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FilmesHD - Detalhes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header small">
+    <div class="brand"><span class="logo">🎬</span> <strong>FilmesHD</strong></div>
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Início</a>
+    </nav>
+  </header>
+
+  <main class="detail-container">
+    <div class="detail-hero" id="detailHero">
+      <div class="detail-title">
+        <h1 id="movieTitle">Título do Filme</h1>
+        <div class="meta">
+          <span>⭐ <strong id="movieRating">8.8</strong></span>
+          <span id="movieYear">1994</span>
+          <span id="movieGenre">Drama</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="detail-content">
+      <div class="left">
+        <h3>Sinopse</h3>
+        <p id="movieOverview">Sinopse do filme.</p>
+
+        <h3>Trailer</h3>
+        <div class="video-placeholder">[Player de vídeo placeholder]</div>
+      </div>
+
+      <aside class="right">
+        <div class="reviews">
+          <h3>Avaliações (0)</h3>
+          <div class="review-box">
+            <textarea placeholder="Escreva seu comentário..."></textarea>
+            <button class="btn red">Enviar Avaliação</button>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © FilmesHD - Exemplo
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Populate from querystring ?id=...
+    const params = new URLSearchParams(location.search);
+    const id = params.get('id') || '1';
+    const movies = JSON.parse(localStorage.getItem('filmesHD_movies') || '[]');
+    const movie = movies.find(m => m.id == id) || movies[0] || {
+      id:'1', title:'Filme Exemplo', rating:'8.4', year:'2023', genre:'Drama', overview:'Sinopse de exemplo.'
+    };
+    document.getElementById('movieTitle').textContent = movie.title;
+    document.getElementById('movieRating').textContent = movie.rating;
+    document.getElementById('movieYear').textContent = movie.year;
+    document.getElementById('movieGenre').textContent = movie.genre;
+    document.getElementById('movieOverview').textContent = movie.overview;
+
+    // set hero bg as poster
+    document.getElementById('detailHero').style.backgroundImage = `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${movie.poster})`;
+  </script>
+</body>
+</html>

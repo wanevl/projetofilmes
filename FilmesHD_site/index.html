@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FilmesHD</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><span class="logo">🎬</span> <strong>FilmesHD</strong></div>
+    <nav class="nav">
+      <a class="nav-link active">Início</a>
+      <button id="profileBtn" class="icon-btn" title="Perfil">🔒</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Bem-vindo ao FilmesHD</h1>
+      <p>Explore um universo de filmes e séries.</p>
+      <div class="search">
+        <input id="searchInput" placeholder="Buscar por título..." />
+      </div>
+    </section>
+
+    <section class="popular">
+      <h2>Populares</h2>
+      <div class="grid" id="moviesGrid">
+
+        <!-- Os 5 originais -->
+        <div class="card" data-title="Forrest Gump">
+          <div class="poster" style="background-image:url('images/forrest-gump.jpg')"></div>
+          <div class="info">
+            <div class="title">Forrest Gump</div>
+            <div class="meta">⭐ 8.8 • Drama</div>
+          </div>
+        </div>
+
+        <div class="card" data-title="Matrix">
+          <div class="poster" style="background-image:url('images/matrix.webp')"></div>
+          <div class="info">
+            <div class="title">Matrix</div>
+            <div class="meta">⭐ 8.7 • Ficção Científica</div>
+          </div>
+        </div>
+
+        <div class="card" data-title="Coringa">
+          <div class="poster" style="background-image:url('images/coringa.jpg')"></div>
+          <div class="info">
+            <div class="title">Coringa</div>
+            <div class="meta">⭐ 8.5 • Drama</div>
+          </div>
+        </div>
+
+        <div class="card" data-title="O Iluminado">
+          <div class="poster" style="background-image:url('images/iluminado.jpg')"></div>
+          <div class="info">
+            <div class="title">O Iluminado</div>
+            <div class="meta">⭐ 8.0 • Terror</div>
+          </div>
+        </div>
+
+        <div class="card" data-title="Aranhaverso">
+          <div class="poster" style="background-image:url('images/aranhaverso.jpg')"></div>
+          <div class="info">
+            <div class="title">Homem-Aranha: Aranhaverso</div>
+            <div class="meta">⭐ 8.4 • Animação</div>
+          </div>
+        </div>
+
+      
+        <div class="card" data-title="Interestelar">
+          <div class="poster" style="background-image:url('images/interstelar.jpg')"></div>
+          <div class="info">
+            <div class="title">Interestelar</div>
+            <div class="meta">⭐ 8.6 • Ficção</div>
+          </div>
+        </div>
+
+        <div class="card" data-title="A Origem">
+          <div class="poster" style="background-image:url('images/a-origem.jpg')"></div>
+          <div class="info">
+            <div class="title">A Origem</div>
+            <div class="meta">⭐ 8.8 • Ação</div>
+          </div>
+        </div>
+
+        <div class="card" data-title="Avatar">
+          <div class="poster" style="background-image:url('images/avatar.jpg')"></div>
+          <div class="info">
+            <div class="title">Avatar</div>
+            <div class="meta">⭐ 7.8 • Ficção</div>
+          </div>
+        </div>
+
+        <div class="card" data-title="Pantera Negra">
+          <div class="poster" style="background-image:url('images/pantera-negra.jpg')"></div>
+          <div class="info">
+            <div class="title">Pantera Negra</div>
+            <div class="meta">⭐ 7.3 • Ação</div>
+          </div>
+        </div>
+
+        <div class="card" data-title="Gladiador">
+          <div class="poster" style="background-image:url('images/gladiador.webp')"></div>
+          <div class="info">
+            <div class="title">Gladiador</div>
+            <div class="meta">⭐ 8.5 • Épico</div>
+          </div>
+        </div>
+
+        <div class="card" data-title="Titanic">
+          <div class="poster" style="background-image:url('images/titanic.jpg')"></div>
+          <div class="info">
+            <div class="title">Titanic</div>
+            <div class="meta">⭐ 7.8 • Romance</div>
+          </div>
+        </div>
+
+        <div class="card" data-title="Vingadores: Ultimato">
+          <div class="poster" style="background-image:url('images/ultimato.jpg')"></div>
+          <div class="info">
+            <div class="title">Vingadores: Ultimato</div>
+            <div class="meta">⭐ 8.4 • Ação</div>
+          </div>
+        </div>
+
+        <div class="card" data-title="Harry Potter e a Pedra Filosofal">
+          <div class="poster" style="background-image:url('images/harry-potter1.jpg')"></div>
+          <div class="info">
+            <div class="title">Harry Potter</div>
+            <div class="meta">⭐ 7.6 • Fantasia</div>
+          </div>
+        </div>
+
+        <div class="card" data-title="Senhor dos Anéis: A Sociedade do Anel">
+          <div class="poster" style="background-image:url('images/senhor-dos-aneis.webp')"></div>
+          <div class="info">
+            <div class="title">Senhor dos Anéis</div>
+            <div class="meta">⭐ 8.8 • Fantasia</div>
+          </div>
+        </div>
+
+        <div class="card" data-title="Deadpool">
+          <div class="poster" style="background-image:url('images/deadpool.png')"></div>
+          <div class="info">
+            <div class="title">Deadpool</div>
+            <div class="meta">⭐ 8.0 • Ação</div>
+          </div>
+        </div>
+
+        <div class="card" data-title="John Wick 4">
+          <div class="poster" style="background-image:url('images/john-wick.webp')"></div>
+          <div class="info">
+            <div class="title">John Wick </div>
+            <div class="meta">⭐ 8.2 • Ação</div>
+          </div>
+        </div>
+
+        <div class="card" data-title="Homem de Ferro">
+          <div class="poster" style="background-image:url('images/homem\ de\ ferro.webp')"></div>
+          <div class="info">
+            <div class="title">Homem de Ferro</div>
+            <div class="meta">⭐ 7.9 • Ação</div>
+          </div>
+        </div>
+
+        <div class="card" data-title="Barbie">
+          <div class="poster" style="background-image:url('images/barbie.jpg')"></div>
+          <div class="info">
+            <div class="title">Barbie</div>
+            <div class="meta">⭐ 7.2 • Comédia</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © FilmesHD - Filmes nas melhores qualidades
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
